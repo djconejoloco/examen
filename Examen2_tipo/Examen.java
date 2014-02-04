@@ -18,9 +18,9 @@ public class Examen extends JFrame {
 	private JPanel contentPane;
 	private JTextField Puntos;
 	private JTextField Resultadomediapuntos;
-	private  ;
+
 	int puntos1=[];
-puntos1= new int[10];
+	puntos1= new int[10];
 
 	/**
 	 * Create the frame.
