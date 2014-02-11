@@ -1,11 +1,19 @@
+import java.awt.EventQueue;
 
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Examen frame = new Examen();
-		frame.setVisible(true);
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Examen frame = new Examen();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
 
+		});
 	}
 
 }
