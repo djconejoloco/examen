@@ -86,7 +86,8 @@ public class Examen extends JFrame {
 					if(puntospartida[i]>puntosmaximos){
 						puntosmaximos=puntospartida[i];
 					}
-				}					
+				}	
+				// numero maxima anotacion
 				manotacion.setText(Integer.toString(puntosmaximos));
 				
 				//numero de partidos
@@ -95,15 +96,16 @@ public class Examen extends JFrame {
 		});
 		guardarpuntuacion.setBounds(330, 7, 130, 23);
 		contentPane.add(guardarpuntuacion);
-
+		// texto  total puntos
 		JLabel texto2 = new JLabel("Total puntos");
 		texto2.setBounds(10, 55, 83, 14);
 		contentPane.add(texto2);
-
+		// texto de maxima anotacion
 		JLabel texto3 = new JLabel("Maxima anotacion");
 		texto3.setBounds(182, 55, 121, 14);
 		contentPane.add(texto3);
-
+		
+		// boton para calcular la media
 		JButton Button2 = new JButton("Calcular Media Puntos por Partida");
 		Button2.setBounds(10, 144, 450, 23);
 		contentPane.add(Button2);
@@ -118,20 +120,22 @@ public class Examen extends JFrame {
 					media=media+puntospartida[i];
 				}	
 				media=media/numeropartidos;
-					
+				//transforma el int en string y lo entrega en el espacio resultadomediapuntos	
 				Resultadomediapuntos.setText(String.valueOf(media));
 			}
 		});
-
+		// Espacio donde saldra la media de los puntos
 		Resultadomediapuntos = new JTextField();
 		Resultadomediapuntos.setBounds(7, 193, 453, 20);
 		contentPane.add(Resultadomediapuntos);
 		Resultadomediapuntos.setColumns(10);
 
+		// texto numero de partidas
 		JLabel texto4 = new JLabel("Numero de partidos ");
 		texto4.setBounds(10, 95, 124, 14);
 		contentPane.add(texto4);
 		
+		// Espacio donde saldra el total de puntos
 		tpuntos = new JTextField();
 		tpuntos.setHorizontalAlignment(SwingConstants.RIGHT);
 		tpuntos.setBackground(SystemColor.control);
@@ -140,6 +144,7 @@ public class Examen extends JFrame {
 		contentPane.add(tpuntos);
 		tpuntos.setColumns(10);
 		
+		// Espacion donde saldra la maxima anotacion
 		manotacion = new JTextField();
 		manotacion.setHorizontalAlignment(SwingConstants.RIGHT);
 		manotacion.setBackground(SystemColor.control);
@@ -148,6 +153,7 @@ public class Examen extends JFrame {
 		contentPane.add(manotacion);
 		manotacion.setColumns(10);
 		
+		// Espacio donde saldra el numero de partidas
 		npartidas = new JTextField();
 		npartidas.setText("0");
 		npartidas.setHorizontalAlignment(SwingConstants.RIGHT);
